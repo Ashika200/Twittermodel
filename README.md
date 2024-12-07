@@ -4,28 +4,27 @@ This project leverages real-time Twitter data to predict stock market trends bas
 Here are the steps to run the project in Google Colab:
 
 Install Dependencies:
-
 !pip install tweepy transformers scikit-learn pandas plotly nltk
+
 Set Up API Keys:
 Create config.py in Colab with your Bearer Token from Twitter.
 
 Run Twitter Scraper:
-
 Use the provided Tweepy streaming code to scrape tweets based on keywords.
+
 Preprocess Tweets:
-
 Clean and tokenize the scraped tweets (remove URLs, mentions, etc.).
-Sentiment Analysis:
 
+Sentiment Analysis:
 Use FinBERT to perform sentiment analysis on tweets:
 sentiment_pipeline = pipeline("sentiment-analysis", model="yiyanghkust/finbert-tone")
+
 Train Prediction Model:
-
 Use a RandomForestClassifier to predict stock trends based on sentiment and engagement metrics.
+
 Visualize Sentiment Trends:
-
 Plot sentiment trends over time using Plotly.
-Export Data:
 
+Export Data:
 Save results (tweets, sentiment data, model outputs) using to_csv() or joblib.
 These are the steps followed!
